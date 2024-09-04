@@ -25,8 +25,8 @@ public class PreguntaControlador {
         return preguntaServicio.filtrarPreguntas(categoria);
     }
 
-    @PostMapping("/nuevaPregunta")
-    public PreguntaEntidad agregarPregunta(@RequestBody PreguntaEntidad pregunta){
-        return preguntaServicio.crearPregunta(pregunta);
-    }
+//    @PostMapping("/nuevaPregunta")
+//    public PreguntaEntidad agregarPregunta(@RequestBody PreguntaEntidad pregunta){
+//        return preguntaServicio.crearPregunta(pregunta);
+//    }
 }
