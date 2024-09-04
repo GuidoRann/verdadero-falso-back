@@ -10,7 +10,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/")
-@CrossOrigin(value = "https://verdadero-falso.vercel.app")
 public class PreguntaControlador {
 
     @Autowired
