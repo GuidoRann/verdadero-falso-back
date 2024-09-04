@@ -1,5 +1,10 @@
-FROM maven:3-openjdk-21 AS build
+# Build stage
+FROM openjdk:21-slim AS build
 WORKDIR /app
+
+# Instalar Maven manualmente
+RUN apt-get update && \
+    apt-get install -y maven
 
 COPY . .
 RUN mvn clean package -DskipTests
