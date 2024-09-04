@@ -13,7 +13,8 @@ RUN mvn clean package -DskipTests
 FROM openjdk:21-jdk-slim
 WORKDIR /app
 
-COPY --from=build /app/target/DrComputer-0.0.1-SNAPSHOT.war drcomputer.war
+# Cambiar a .jar si es el tipo de archivo que se genera
+COPY --from=build /app/target/vof-0.0.1-SNAPSHOT.jar drcomputer.jar
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "drcomputer.war"]
+ENTRYPOINT ["java", "-jar", "drcomputer.jar"]
