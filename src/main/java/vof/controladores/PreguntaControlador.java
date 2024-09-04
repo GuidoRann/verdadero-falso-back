@@ -7,9 +7,10 @@ import vof.servicios.IPreguntaServicio;
 
 import java.util.List;
 
+
 @RestController
 @RequestMapping("/")
-@CrossOrigin(value = "http://localhost:5173")
+@CrossOrigin(value = "https://verdadero-falso.vercel.app")
 public class PreguntaControlador {
 
     @Autowired
